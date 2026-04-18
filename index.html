@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Finestra Viajes — Agencia familiar con más de 22 años de experiencia en turismo. Asesoramiento personalizado y experiencias de viaje únicas.">
+  <title>Finestra Viajes | Viví el viaje desde antes de partir</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================
+       LOADER
+  ============================================ -->
+  <div id="loader" class="loader">
+    <div class="loader__content">
+      <img src="assets/logofinestra.png" alt="Finestra Viajes" class="loader__logo-img">
+      <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+      <p class="loader__text">Preparando tu experiencia</p>
+    </div>
+  </div>
+
+  <!-- ============================================
+       NAVBAR
+  ============================================ -->
+  <nav id="navbar" class="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="assets/logofinestra.png" alt="Finestra Viajes" class="nav__logo-img">
+      </a>
+      <ul class="nav__links">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#experiencias">Experiencias</a></li>
+        <li><a href="#diferencial">Por qué elegirnos</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+      </ul>
+      <a href="#contacto" class="nav__cta">Consultar</a>
+      <button id="menu-toggle" class="nav__burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mob-menu">
+    <ul>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#experiencias">Experiencias</a></li>
+      <li><a href="#diferencial">Por qué elegirnos</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#contacto" class="mob-menu__cta">Consultar</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================
+       SCROLL PROGRESS
+  ============================================ -->
+  <div class="progress"><div class="progress__bar"></div></div>
+
+  <!-- ============================================
+       VIDEO DE FONDO — Fijo, visible detrás de todo
+  ============================================ -->
+  <div class="video-fixed">
+    <video
+      id="bg-video"
+      class="video-bg"
+      muted
+      playsinline
+      preload="auto"
+    >
+      <source src="assets/video_prueba_opt.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <!-- ============================================
+       ZONA DE SCROLL — Controla el avance del video
+       El usuario scrollea por 500vh mientras el
+       video avanza. El hero queda sticky adentro.
+  ============================================ -->
+  <section id="video-section" class="video-section">
+    <div class="hero-sticky">
+      <div class="hero">
+        <div class="hero__inner">
+          <div class="hero__badge" data-anim="fade" data-delay="0">
+            <span class="hero__dot"></span>
+            Agencia familiar · Desde 2003
+          </div>
+          <h1 class="hero__title">
+            <span class="hero__line">Viví el viaje</span>
+            <span class="hero__line hero__line--accent">desde antes de partir</span>
+          </h1>
+          <p class="hero__sub" data-anim="fade" data-delay="0.6">
+            Más de 23 años creando experiencias únicas
+          </p>
+          <a href="#contacto" class="hero__btn" data-anim="fade" data-delay="0.8">
+            <span>Descubrí tu próximo destino</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="hero__scroll" data-anim="fade" data-delay="1.2">
+          <div class="hero__scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTENIDO — Secciones con fondo semi-transparente
+       El video se ve detrás de cada sección
+  ============================================ -->
+  <main class="content">
+
+    <!-- ========== SOBRE NOSOTROS ========== -->
+    <section id="nosotros" class="section section--solid">
+      <div class="container">
+        <div class="split-layout">
+          <div class="split-layout__left" data-anim="reveal-left">
+            <span class="tag">Sobre Nosotros</span>
+            <h2 class="heading-2">Una familia que<br><em>te acompaña</em></h2>
+            <p class="body-text">
+              En Finestra Viajes somos una agencia familiar con más de 22 años de experiencia en el mundo del turismo. Crecemos acompañando a cada viajero en cada paso, ofreciendo asesoramiento personalizado y experiencias pensadas a medida.
+            </p>
+          </div>
+          <div class="split-layout__right">
+            <div class="stats-grid">
+              <div class="stat" data-anim="fade" data-delay="0.1">
+                <span class="stat__num" data-count="23">0</span>
+                <span class="stat__label">Años de experiencia</span>
+              </div>
+              <div class="stat" data-anim="fade" data-delay="0.2">
+                <span class="stat__num" data-count="5000">0</span>
+                <span class="stat__label">Viajeros felices</span>
+              </div>
+              <div class="stat" data-anim="fade" data-delay="0.3">
+                <span class="stat__num" data-count="50">0</span>
+                <span class="stat__label">Destinos disponibles</span>
+              </div>
+              <div class="stat" data-anim="fade" data-delay="0.4">
+                <span class="stat__num" data-count="100">0</span>
+                <span class="stat__label">% Compromiso</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCIAS ========== -->
+    <section id="experiencias" class="section section--glass">
+      <div class="container">
+        <div class="section-header" data-anim="fade">
+          <span class="tag tag--center">Nuestras Experiencias</span>
+          <h2 class="heading-2 heading-2--center">Diseñamos viajes<br><em>para cada estilo</em></h2>
+          <p class="body-text body-text--center">
+            Desde escapadas cercanas hasta experiencias internacionales, siempre con el respaldo y la atención que nos caracteriza.
+          </p>
+        </div>
+        <div class="cards-row">
+          <article class="card" data-anim="card" data-delay="0">
+            <div class="card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3 class="card__title">Salidas grupales</h3>
+            <p class="card__text">Viajá con un grupo y viví momentos únicos compartiendo la aventura.</p>
+          </article>
+          <article class="card" data-anim="card" data-delay="0.1">
+            <div class="card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="card__title">Escapadas</h3>
+            <p class="card__text">Desconectá de la rutina con escapadas cortas pensadas para renovarte.</p>
+          </article>
+          <article class="card" data-anim="card" data-delay="0.2">
+            <div class="card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            </div>
+            <h3 class="card__title">Viajes internacionales</h3>
+            <p class="card__text">Explorá el mundo con la seguridad y el respaldo de nuestra experiencia.</p>
+          </article>
+          <article class="card" data-anim="card" data-delay="0.3">
+            <div class="card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </div>
+            <h3 class="card__title">Experiencias personalizadas</h3>
+            <p class="card__text">Tu viaje, a tu medida. Armamos cada detalle según tus sueños.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== POR QUÉ ELEGIRNOS ========== -->
+    <section id="diferencial" class="section section--solid">
+      <div class="container">
+        <div class="split-layout split-layout--reverse">
+          <div class="split-layout__left" data-anim="reveal-right">
+            <span class="tag">Por qué elegirnos</span>
+            <h2 class="heading-2">No vendemos viajes,<br><em>creamos experiencias</em></h2>
+            <p class="body-text">que acompañan cada etapa de tu recorrido.</p>
+          </div>
+          <div class="split-layout__right">
+            <div class="features">
+              <div class="feature" data-anim="fade" data-delay="0.05">
+                <div class="feature__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div>
+                <div><h3 class="feature__title">Atención personalizada</h3><p class="feature__text">Cada viajero es único, y lo tratamos así.</p></div>
+              </div>
+              <div class="feature" data-anim="fade" data-delay="0.15">
+                <div class="feature__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+                <div><h3 class="feature__title">Trayectoria y confianza</h3><p class="feature__text">Más de dos décadas nos respaldan.</p></div>
+              </div>
+              <div class="feature" data-anim="fade" data-delay="0.25">
+                <div class="feature__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg></div>
+                <div><h3 class="feature__title">Acompañamiento constante</h3><p class="feature__text">Antes, durante y después de tu viaje.</p></div>
+              </div>
+              <div class="feature" data-anim="fade" data-delay="0.35">
+                <div class="feature__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg></div>
+                <div><h3 class="feature__title">Opciones de financiación</h3><p class="feature__text">Facilidades para que tu viaje no espere.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIOS ========== -->
+    <section id="testimonios" class="section section--glass">
+      <div class="container">
+        <div class="section-header" data-anim="fade">
+          <span class="tag tag--center">Testimonios</span>
+          <h2 class="heading-2 heading-2--center">Lo que dicen<br><em>nuestros viajeros</em></h2>
+        </div>
+        <div class="testimonials-row">
+          <blockquote class="quote" data-anim="card" data-delay="0">
+            <p class="quote__text">"Viajar con Finestra fue una experiencia increíble, todo organizado y sin preocupaciones."</p>
+            <footer class="quote__footer">
+              <div class="quote__avatar">ML</div>
+              <div><cite class="quote__name">María L.</cite><span class="quote__trip">Caribe · 2024</span></div>
+            </footer>
+            <div class="quote__stars">★★★★★</div>
+          </blockquote>
+          <blockquote class="quote" data-anim="card" data-delay="0.12">
+            <p class="quote__text">"Se nota la experiencia y el trato cercano en cada detalle."</p>
+            <footer class="quote__footer">
+              <div class="quote__avatar">CP</div>
+              <div><cite class="quote__name">Carlos P.</cite><span class="quote__trip">Europa · 2023</span></div>
+            </footer>
+            <div class="quote__stars">★★★★★</div>
+          </blockquote>
+          <blockquote class="quote" data-anim="card" data-delay="0.24">
+            <p class="quote__text">"Organizaron nuestro viaje soñado con una dedicación increíble. ¡Cada detalle fue perfecto!"</p>
+            <footer class="quote__footer">
+              <div class="quote__avatar">AG</div>
+              <div><cite class="quote__name">Ana G.</cite><span class="quote__trip">Patagonia · 2024</span></div>
+            </footer>
+            <div class="quote__stars">★★★★★</div>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA FINAL ========== -->
+    <section id="contacto" class="section section--cta">
+      <div class="container">
+        <div class="cta-box" data-anim="fade">
+          <span class="tag tag--center">¿Listo para viajar?</span>
+          <h2 class="heading-2 heading-2--center heading-2--white">Tu próximo viaje<br><em>empieza acá</em></h2>
+          <p class="body-text body-text--center">Contanos a dónde querés ir y armamos juntos la experiencia perfecta.</p>
+          <!-- PLACEHOLDER: Reemplazar href -->
+          <a href="#" class="cta-box__btn" onclick="event.preventDefault();">
+            <span>Quiero más información</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <div class="cta-box__links">
+            <a href="#" onclick="event.preventDefault();"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg> WhatsApp</a>
+            <a href="#" onclick="event.preventDefault();"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg> Instagram</a>
+            <a href="#" onclick="event.preventDefault();"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img src="assets/logofinestra.png" alt="Finestra Viajes" class="footer__logo">
+      <p class="footer__tagline">Viví el viaje desde antes de partir</p>
+      <div class="footer__line"></div>
+      <p class="footer__copy">&copy; 2024 Finestra Viajes. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
