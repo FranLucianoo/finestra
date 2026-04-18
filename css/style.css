@@ -233,7 +233,7 @@ button { font-family: inherit; }
 .video-section {
   position: relative;
   z-index: 1;
-  height: 200vh;  /* Scroll corto: el video avanza rápido, contenido aparece pronto */
+  height: 130vh;  /* Scroll súper corto: la sig. sección entra casi inmediato */
 }
 
 .hero-sticky {
@@ -675,5 +675,5 @@ button { font-family: inherit; }
   .testimonials-row { grid-template-columns:1fr; }
   .hero__title { font-size:clamp(2.2rem,9vw,3.2rem); }
   .cta-box__links { flex-direction:column; gap:.8rem; align-items:center; }
-  .video-section { height: 150vh; }
+  .video-section { height: 130vh; }
 }
