@@ -191,7 +191,7 @@
         scrollTrigger: {
           trigger: el,
           start: isMobile() ? 'top 92%' : 'top 82%',
-          toggleActions: 'play none none reverse',
+          toggleActions: 'play reverse play reverse',
         },
         ...to,
       });
@@ -208,7 +208,7 @@
         scrollTrigger: {
           trigger: counter,
           start: 'top 88%',
-          toggleActions: 'play none none reverse',
+          toggleActions: 'play reverse play reverse',
         },
         innerText: target,
         duration: 2.2,
